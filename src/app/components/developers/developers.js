@@ -1,3 +1,4 @@
+import Image from "next/image"
 const people = [
     {
       name: 'Aditya Verma',
@@ -20,7 +21,7 @@ const people = [
             {people.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
-                  <img alt="" src={person.imageUrl} className="h-16 w-16 rounded-full" />
+                  <Image width="50" height="50" alt="" src={person.imageUrl} className="h-16 w-16 rounded-full" />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-500">{person.name}</h3>
                     <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
