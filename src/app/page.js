@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero/>
-      {/* <Blogcard /> */}
+      <Blogcard />
       <Brands/>
       <Developers/>
       <Newsletter/>
