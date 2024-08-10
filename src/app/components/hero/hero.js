@@ -1,14 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-black">
+    <div className="bg-black heroadjust">
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           aria-hidden="true"
@@ -37,17 +35,17 @@ export default function Hero() {
               BLOG WEBSITE
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-500">
-              Develped in house
+              Developed in house
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#target-section"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-400">
-                Learn more <span aria-hidden="true">→</span>
+              <a href="signin" className="text-sm font-semibold leading-6 text-gray-400">
+                Signin <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -65,6 +63,14 @@ export default function Hero() {
           />
         </div>
       </div>
+      <div id="target-section" className="py-32 sm:py-48 lg:py-56">
+        {/* Content of the target section */}
+      </div>
+      <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
+      `}</style>
     </div>
   )
 }

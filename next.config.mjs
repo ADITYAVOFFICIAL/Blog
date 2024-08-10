@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['adityaver.vercel.app'], // Add your image host domain here
-    },
-  };
-  
-  export default nextConfig;
-  
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'adityaver.vercel.app',
+        pathname: '/**',
+      },
+    ],
+  },
+};
+
+export default nextConfig;
